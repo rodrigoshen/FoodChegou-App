@@ -1,5 +1,6 @@
 
-![alt text](<FoodChegou - Logo.png>)
+<img width="300" height="250" alt="FoodChegou - Logo" src="https://github.com/user-attachments/assets/4f0e51e8-c704-4924-89fb-b455659ee638" />
+
 # Projeto FoodChegou - SPA (Single Page Application) de aplicativo baseado no Ifood feito no framework Angular
 
 Este projeto se basea em uma SPA (Single Page Application) de um aplicativo baseado no ifood Angular, feito para além de aprendizado, também
