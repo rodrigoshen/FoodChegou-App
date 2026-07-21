@@ -1,0 +1,78 @@
+<h2
+    class="text-2xl font-bold"
+>Contato
+</h2>
+
+<h3 class="font-semibold">Envie-nos uma mensagem</h3>
+<form 
+    [formGroup]="loginForm"
+    class="flex flex-col w-90 md:w-120"
+ (submit)="onSubmit($event)">
+    <div class="flex flex-col gap-5">
+        
+        <div class="relative">
+            <input
+                id="name"
+                placeholder=" "
+                class="w-full relative peer bg-black text-white p-2" 
+                type="text" formControlName="name" name="name"/>
+            <label class="bg-black text-white relative -top-8 left-2 peer-[:not(:placeholder-shown)]:opacity-0 peer-focus:opacity-0 transition-opacity duration-150" htmlFor="name">
+                Nome
+            </label>
+        </div>
+        
+
+        <div class="relative">
+            <input
+            id="email"
+            placeholder=" "
+            class="w-full relative peer bg-black text-white p-2"
+             type="text" formControlName="email" name="email"/>
+            <label 
+            htmlFor="email"
+            class="relative -top-8 left-2 text-white peer-[:not(:placeholder-shown)]:opacity-0 peer-focus:opacity-0 transition-opacity duration-150">
+                Email
+            </label>
+        </div>
+        
+
+        <div class="relative">
+                <input
+                id="message"
+                placeholder=" "
+                class="w-full h-30 relative peer bg-black text-white pb-25 p-2"
+                type="text" formControlName="description" name="description"/>
+             <label
+            htmlFor="message"
+            class=" peer-focus:opacity-0 peer-[:not(:placeholder-shown)]:opacity-0 bg-black text-white transition-opacity duration-150
+             relative -top-29 left-2">
+                Sua mensagem
+            </label>
+        </div>
+        
+    </div>
+
+    <div
+        class="w-50 h-50 text-3xl"
+    >
+    @if ( loginForm.get("name")?.value?.length === 0  ) {
+        <p>Hello</p>
+    } @else {
+        <p>Hello {{ loginForm.get("name")?.value?.length }}!</p>
+    }
+        
+        <p>Your email is {{ loginForm.get("email")?.value}}!</p>
+    </div>
+    
+    
+    <button
+        [disabled]="!loginForm.valid"
+        class="bg-[#4727CD] w-40 h-10 text-white font-semibold text-sm cursor-pointer hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-auto disabled:hover:bg-[#4727CD]" 
+        type="submit"
+        >Enviar
+    </button>
+
+</form>
+
+
+

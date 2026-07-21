@@ -1,0 +1,16 @@
+:root {
+    
+}
+
+@theme inline {
+
+
+    --color-secundary-color : #4727CD;
+}
+
+main {
+    background-color: #FEFF83;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
